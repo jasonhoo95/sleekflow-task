@@ -45,7 +45,7 @@ export default function Contact() {
 
 	return (
 		<div className="contact-container">
-			<h1>Contact</h1>
+			<h1>Contact List</h1>
 			<input
 				onChange={(e) => {
 					const filters = { ...filterParam };
