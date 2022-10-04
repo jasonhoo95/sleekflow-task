@@ -1,9 +1,7 @@
 import { useEffect, useState } from "react";
-import { json, useParams, useSearchParams } from "react-router-dom";
 import SearchItem from "../components/searchItem";
 export default function Contact() {
 	const [data, setData] = useState();
-	const [search, setSearch] = useState();
 	const [filterData, setFilter] = useState();
 	const [filterParam, setFilterParam] = useState();
 	useEffect(() => {
@@ -189,7 +187,6 @@ export default function Contact() {
 								clearFilter();
 							}}
 							className="dropbtn">
-							{" "}
 							Clear All Filters
 						</button>
 					</div>
