@@ -23,7 +23,7 @@ export default function ContactDetails() {
 	return (
 		<div>
 			<div className="main-header">
-				<div style={{ display: "flex", alignItems: "center" }}>
+				<div style={{ textAlign: "center" }}>
 					<img style={{ width: "200px", height: "200px", borderRadius: "50%" }} src={data?.image} />
 					<h1 style={{ color: "black", marginLeft: "30px" }}>{data?.name}</h1>
 				</div>
