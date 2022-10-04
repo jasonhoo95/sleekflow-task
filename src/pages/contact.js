@@ -46,17 +46,20 @@ export default function Contact() {
 	return (
 		<div className="contact-container">
 			<h1>Contact List</h1>
-			<input
-				onChange={(e) => {
-					const filters = { ...filterParam };
-					filters.search = e.target.value;
-					setFilterParam(filters);
-				}}
-				className="input-txt"
-				placeholder="search name"
-				type="text"
-			/>
-			<div style={{ display: "flex", alignItems: "center" }}>
+			<div style={{ display: "flex", width: "100%" }}>
+				<input
+					onChange={(e) => {
+						const filters = { ...filterParam };
+						filters.search = e.target.value;
+						setFilterParam(filters);
+					}}
+					className="input-txt"
+					placeholder="search name"
+					type="text"
+				/>
+			</div>
+
+			<div style={{ display: "flex", alignItems: "center", flexFlow: "row wrap" }}>
 				<div className="dropdown">
 					<button className="dropbtn">
 						{filterParam?.status ? filterParam.status : "Status"} <i className="fa fa-angle-down"></i>
@@ -181,7 +184,7 @@ export default function Contact() {
 				</div>
 
 				{filterParam?.status || filterParam?.gender ? (
-					<div style={{ marginLeft: "auto" }}>
+					<div className="clear-filter">
 						<button
 							onClick={(e) => {
 								clearFilter();

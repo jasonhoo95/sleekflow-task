@@ -38,6 +38,7 @@ code {
 	max-width: 1000px;
 	margin-left: auto;
 	margin-right: auto;
+	overflow-x: auto;
 }
 
 .small-title {
@@ -154,7 +155,7 @@ a {
 }
 
 .contact-container {
-	transition: all ease-in 0.5s;
+	padding: 20px;
 	max-width: 1000px;
 	margin-left: auto;
 	margin-right: auto;
@@ -173,4 +174,18 @@ tr th {
 
 .contact-container.active {
 	margin-left: 20%;
+}
+
+.clear-filter {
+	margin-left: auto;
+}
+
+@media (max-width: 750px) {
+	.details-object {
+		width: 100%;
+	}
+
+	.clear-filter {
+		margin-left: 0;
+	}
 }
