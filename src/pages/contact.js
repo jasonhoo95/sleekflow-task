@@ -17,11 +17,12 @@ export default function Contact() {
 
 	useEffect(() => {
 		if (filterParam) {
+			console.log(filterParam, "filter params");
 			const filterSearch = data.filter((o) => {
 				const name = o.name.toLowerCase();
 				const gender = o.gender.toLowerCase();
 				const genderMatch = filterParam.gender ? gender.match(filterParam.gender) : true;
-				return name.includes(filterParam.search.toLowerCase() || "") && o.status.includes(filterParam.status || "") && genderMatch;
+				return name.includes(filterParam?.search?.toLowerCase() || "") && o.status.includes(filterParam.status || "") && genderMatch;
 			});
 
 			setFilter(filterSearch);
